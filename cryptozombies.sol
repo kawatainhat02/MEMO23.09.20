@@ -151,3 +151,45 @@ contract ZombieFactory {
 
 
 
+pragma solidity >=0.5.0 <0.6.0;
+
+// put import statement here
+
+contract ZombieFeeding is ZombieFactory {
+
+}
+
+pragma solidity >=0.5.0 <0.6.0;
+
+import "./zombiefactory.sol";
+
+contract ZombieFeeding is ZombieFactory {
+
+  // Start here
+
+}
+
+
+function testDnaSplicing() public {
+  uint zombieDna = 2222222222222222;
+  uint targetDna = 4444444444444444;
+  uint newZombieDna = (zombieDna + targetDna) / 2;
+  // ^ will be equal to 3333333333333333
+}
+
+pragma solidity >=0.5.0 <0.6.0;
+
+import "./zombiefactory.sol";
+
+contract ZombieFeeding is ZombieFactory {
+
+  function feedAndMultiply(uint _zombieId, uint _targetDna) public {
+    require(msg.sender == zombieToOwner[_zombieId]);
+    Zombie storage myZombie = zombies[_zombieId];
+    // start here
+  }
+
+}
+
+
+
